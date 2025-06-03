@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Dočasné soubory
+*.tmp
+*.temp
+
+# Osobní poznámky
+poznamky.txt
+
+# Staré verze
+nabidka-fve-asv-solnice.html
+kalkulator-nabidky.html

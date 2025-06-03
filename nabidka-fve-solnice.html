@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabídka FVE - ASV Solnice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a72 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .project-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .info-box h3 {
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 5px;
+        }
+        
+        .info-box p {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        .section h2 {
+            color: #2c5aa0;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2c5aa0;
+        }
+        
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .budget-table th {
+            background: #2c5aa0;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .budget-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .budget-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .budget-table tr:hover {
+            background: #e3f2fd;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #2c5aa0;
+            text-align: right;
+        }
+        
+        .total-row {
+            background: #2c5aa0 !important;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .total-row td {
+            border: none;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2c5aa0;
+        }
+        
+        .contact-card h4 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .energy-chart {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #e9ecef;
+        }
+        
+        @media (max-width: 768px) {
+            .project-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .stat-value {
+                font-size: 2em;
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Nabídka instalace FVE</h1>
+            <div class="subtitle">ASV Solnice - Rychnov nad Kněžnou</div>
+        </div>
+
+        <div class="project-info">
+            <div class="info-box">
+                <h3>Informace o projektu</h3>
+                <p><strong>Název projektu:</strong> Instalace FVE "ASV Solnice"</p>
+                <p><strong>Lokace:</strong> Školní 71, 517 01 Solnice</p>
+                <p><strong>Objednatel:</strong> ASV výrobní družstvo</p>
+                <p><strong>Datum:</strong> 3. 6. 2025</p>
+                <p><strong>Katastrální území:</strong> Solnice [665126]</p>
+            </div>
+            <div class="info-box">
+                <h3>Zhotovitel</h3>
+                <p><strong>Společnost:</strong> iSolar PV s.r.o.</p>
+                <p><strong>IČO:</strong> 14281597</p>
+                <p><strong>Adresa:</strong> Hronovická 663, Pardubice 53002</p>
+                <p><strong>Vypracoval:</strong> Kalabis Tomáš</p>
+            </div>
+        </div>
+
+        <div class="highlight-stats">
+            <div class="stat-card">
+                <div class="stat-value">99,82</div>
+                <div class="stat-label">kWp instalovaný výkon</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">217</div>
+                <div class="stat-label">FV panelů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">6</div>
+                <div class="stat-label">instalačních polí</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">217</div>
+                <div class="stat-label">optimizérů</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technické parametry systému</h2>
+            <div class="energy-chart">
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Parametr</th>
+                            <th>Hodnota</th>
+                            <th>Jednotka</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Instalovaný DC výkon</td>
+                            <td>99,82</td>
+                            <td>kWp</td>
+                        </tr>
+                        <tr>
+                            <td>Max dosažitelný AC výkon</td>
+                            <td>78,3</td>
+                            <td>kW</td>
+                        </tr>
+                        <tr>
+                            <td>Odhadovaná roční výroba</td>
+                            <td>99,8</td>
+                            <td>MWh</td>
+                        </tr>
+                        <tr>
+                            <td>Úspora emisí CO2 (roční)</td>
+                            <td>51,1</td>
+                            <td>t</td>
+                        </tr>
+                        <tr>
+                            <td>Ekvivalent vysazených stromů</td>
+                            <td>2 348</td>
+                            <td>ks</td>
+                        </tr>
+                        <tr>
+                            <td>Výkonový poměr (Performance Ratio)</td>
+                            <td>86</td>
+                            <td>%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Komponenty systému</h2>
+            <div class="energy-chart">
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Komponenta</th>
+                            <th>Typ/Model</th>
+                            <th>Množství</th>
+                            <th>Výkon/Specifikace</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>FV panely</td>
+                            <td>Monokrystalické solární panely 460 Wp</td>
+                            <td>217 ks</td>
+                            <td>460 Wp</td>
+                        </tr>
+                        <tr>
+                            <td>Instalační pole A-F</td>
+                            <td>Distribuce na 6 různých budovách</td>
+                            <td>6 polí</td>
+                            <td>Sedlové + pultové střechy</td>
+                        </tr>
+                        <tr>
+                            <td>Síťové měniče</td>
+                            <td>Třífázové střídače s MPPT optimalizací</td>
+                            <td>2 ks</td>
+                            <td>Celkem ~78 kW AC</td>
+                        </tr>
+                        <tr>
+                            <td>MPPT optimizéry</td>
+                            <td>Optimalizace na úrovni panelů</td>
+                            <td>217 ks</td>
+                            <td>1 optimizér/panel</td>
+                        </tr>
+                        <tr>
+                            <td>Nosné konstrukce</td>
+                            <td>Ocel-hliníkový systém s krátkými lištami</td>
+                            <td>6 sad</td>
+                            <td>VSŽ + ocelové plechy</td>
+                        </tr>
+                        <tr>
+                            <td>Kabeláž DC/AC</td>
+                            <td>Kabely 6mm² v ocelových žlabech</td>
+                            <td>Komplet</td>
+                            <td>RFVE rozvaděče</td>
+                        </tr>
+                        <tr>
+                            <td>Připojení k síti</td>
+                            <td>NN síť ČEZ Distribuce a.s.</td>
+                            <td>1 ks</td>
+                            <td>3x400/230V, 50Hz</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Rozpočet zakázky</h2>
+            <table class="budget-table">
+                <thead>
+                    <tr>
+                        <th>Položka</th>
+                        <th>Popis</th>
+                        <th class="price">Cena bez DPH</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>01</strong></td>
+                        <td><strong>PV technologie</strong></td>
+                        <td class="price"><strong>352 175,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Montáž FV panelů na sedlové střechy (pole A,B,E)</td>
+                        <td class="price">90 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Montáž FV panelů na pultové střechy (pole C,D,F)</td>
+                        <td class="price">85 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Síťové měniče DC/AC + montáž (2 ks)</td>
+                        <td class="price">65 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• MPPT optimizéry (217 ks)</td>
+                        <td class="price">112 175,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td><strong>02</strong></td>
+                        <td><strong>PV konstrukce</strong></td>
+                        <td class="price"><strong>346 017,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Nosné konstrukce sedlové střechy (pole A,B,E)</td>
+                        <td class="price">145 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Nosné konstrukce pultové střechy (pole C,D,F)</td>
+                        <td class="price">160 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Kotvení do VSŽ plechů a pomocné konstrukce</td>
+                        <td class="price">41 017,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td><strong>03</strong></td>
+                        <td><strong>Rozvaděče</strong></td>
+                        <td class="price"><strong>137 791,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• AC rozvaděče RFVE s výbavou + montáž</td>
+                        <td class="price">75 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• DC rozvaděče u střídačů (RFVE.DC série)</td>
+                        <td class="price">35 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• DC rozvaděče u stringů na střeše</td>
+                        <td class="price">27 791,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td><strong>04</strong></td>
+                        <td><strong>Kabelové trasy</strong></td>
+                        <td class="price"><strong>120 650,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• AC kabelové trasy v ocelových žlabech</td>
+                        <td class="price">41 250,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• DC kabelové trasy 6mm² mezi polími A-F</td>
+                        <td class="price">79 400,00 Kč</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="2"><strong>CELKEM bez DPH</strong></td>
+                        <td class="price"><strong>956 633,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">DPH 21%</td>
+                        <td class="price">200 893,00 Kč</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="2"><strong>CELKEM s DPH</strong></td>
+                        <td class="price"><strong>1 157 526,00 Kč</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Podmínky nabídky</h2>
+            <div class="energy-chart">
+                <h4>Základní podmínky:</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Nabídka je platná 30 dnů od data vystavení</li>
+                    <li>Dodací lhůta: 6-8 týdnů od podpisu smlouvy</li>
+                    <li>Doprava na stavbu je zahrnuta v cenách montáže</li>
+                    <li>Záruční doba: 5 let na montáž, 12 let na FV panely, 12 let na měniče</li>
+                    <li>Platební podmínky: 30% záloha, 70% při předání díla</li>
+                </ul>
+                
+                <h4 style="margin-top: 20px;">Specifikace instalace:</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Pole A-F:</strong> Distribuce na 6 různých budovách areálu</li>
+                    <li><strong>Typ střech:</strong> Sedlové (pole A,B,E) + pultové (pole C,D,F)</li>
+                    <li><strong>Materiál střech:</strong> VSŽ a ocelové profilové plechy</li>
+                    <li><strong>Kotvenì:</strong> Mechanické kotvení do trapézových plechů</li>
+                    <li><strong>Kabeláž:</strong> Vedení v ocelových žlabech podél okrajů střech</li>
+                    <li><strong>Připojení:</strong> NN síť ČEZ Distribuce a.s. 3x400/230V</li>
+                </ul>
+                
+                <h4 style="margin-top: 20px;">V ceně je zahrnuto:</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Kompletní dodávka všech komponentů FVE systému</li>
+                    <li>Montáž na 6 různých budovách včetně nosných konstrukcí</li>
+                    <li>Elektroinstalace včetně rozvaděčů RFVE a kabelových tras</li>
+                    <li>Uvedení do provozu a první servis</li>
+                    <li>Dokumentace skutečného provedení</li>
+                    <li>Školení obsluhy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h2 style="margin-bottom: 20px; color: #2c5aa0;">Kontaktní údaje</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Zhotovitel</h4>
+                    <p><strong>iSolar PV s.r.o.</strong></p>
+                    <p>IČO: 14281597</p>
+                    <p>Hronovická 663</p>
+                    <p>Pardubice 53002</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Kontaktní osoba</h4>
+                    <p><strong>Kalabis Tomáš</strong></p>
+                    <p>Projektový manažer</p>
+                    <p>Email: info@isolar.cz</p>
+                    <p>Telefon: +420 XXX XXX XXX</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Tato nabídka byla vygenerována dne 3. 6. 2025</p>
+            <p>© 2025 iSolar PV s.r.o. - Profesionální instalace fotovoltaických systémů</p>
+        </div>
+    </div>
+</body>
+</html>
