@@ -1,38 +1,53 @@
-name: Aktualizace nabídky
+name: Update Nabidka Prices
 
 on:
-  workflow_dispatch: # Ruční spuštění
   push:
     paths:
-      - 'prices.json' # Spustit při změně prices.json
-  schedule:
-    - cron: '0 8 * * 1' # Každé pondělí v 8:00
+      - 'prices.json'
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  update-quote:
+  update-prices:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout kód
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          
-      - name: Aktualizace nabídky
-        run: |
-          # JavaScript skript pro aktualizaci cen
-          node .github/scripts/update-prices.js
-          
-      - name: Commit a push změn
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add index.html
-          if git diff --staged --quiet; then
-            echo "Žádné změny k commitu"
-          else
-            git commit -m "🤖 Automatická aktualizace cen nabídky"
-            git push
-          fi
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Update HTML with new prices
+      run: node .github/scripts/update-prices.js
+      
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add index.html
+        git commit -m "🤖 Automaticky aktualizované ceny z prices.json
+
+        Generováno GitHub Actions 🚀"
+        
+    - name: Push changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
