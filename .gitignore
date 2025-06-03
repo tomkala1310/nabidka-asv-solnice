@@ -1,13 +1,7 @@
-# macOS
+# Citlivé soubory - neukládáme na GitHub
+rozpocet-kalkulace.html
+
+# Další ignorované soubory
 .DS_Store
-
-# Dočasné soubory
-*.tmp
-*.temp
-
-# Osobní poznámky
-poznamky.txt
-
-# Staré verze
-nabidka-fve-asv-solnice.html
-kalkulator-nabidky.html
+*.log
+node_modules/
