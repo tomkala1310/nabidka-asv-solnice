@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabídka FVE - ASV Solnice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a72 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .project-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .info-box h3 {
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 5px;
+        }
+        
+        .info-box p {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        .section h2 {
+            color: #2c5aa0;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2c5aa0;
+        }
+        
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .budget-table th {
+            background: #2c5aa0;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .budget-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .budget-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .budget-table tr:hover {
+            background: #e3f2fd;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #1a1a1a;
+            text-align: right;
+        }
+        
+        .total-row {
+            background: #2c5aa0 !important;
+            color: white !important;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .total-row .price {
+            color: white !important;
+        }
+        
+        .total-row td {
+            border: none;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2c5aa0;
+        }
+        
+        .contact-card h4 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .energy-chart {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #e9ecef;
+        }
+        
+        .component-details {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #2c5aa0;
+        }
+        
+        .field-distribution {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .field-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            text-align: center;
+        }
+        
+        .field-card h4 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .project-info, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .stat-value {
+                font-size: 1.8em;
+            }
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; max-width: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Nabídka instalace FVE</h1>
+            <div class="subtitle">ASV Solnice - Fotovoltaická elektrárna</div>
+        </div>
+
+        <div class="project-info">
+            <div class="info-box">
+                <h3>Informace o projektu</h3>
+                <p><strong>Název projektu:</strong> Instalace FVE "ASV Solnice"</p>
+                <p><strong>Lokace:</strong> ASV Solnice, 61, Olešnice, 517 36</p>
+                <p><strong>Objednatel:</strong> Green Technology s.r.o.</p>
+                <p><strong>Datum nabídky:</strong> 3. 6. 2025</p>
+                <p><strong>ID instalace (SolarEdge):</strong> 8903176288379021</p>
+            </div>
+            <div class="info-box">
+                <h3>Zhotovitel</h3>
+                <p><strong>Společnost:</strong> iSolar PV s.r.o.</p>
+                <p><strong>IČO:</strong> 14281597</p>
+                <p><strong>Adresa:</strong> Hronovická 663, Pardubice 53002</p>
+                <p><strong>Projektový manažer:</strong> Kalabis Tomáš</p>
+            </div>
+        </div>
+
+        <div class="highlight-stats">
+            <div class="stat-card">
+                <div class="stat-value">99,82</div>
+                <div class="stat-label">kWp instalovaný výkon</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">75,0</div>
+                <div class="stat-label">kW AC výkon</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">217</div>
+                <div class="stat-label">FV panelů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">110</div>
+                <div class="stat-label">optimizérů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">5</div>
+                <div class="stat-label">instalačních polí</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technické parametry systému</h2>
+            <div class="energy-chart">
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Parametr</th>
+                            <th>Hodnota</th>
+                            <th>Jednotka</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Instalovaný DC výkon</td>
+                            <td>99,82</td>
+                            <td>kWp</td>
+                        </tr>
+                        <tr>
+                            <td>Max dosažitelný AC výkon</td>
+                            <td>75,0</td>
+                            <td>kW</td>
+                        </tr>
+                        <tr>
+                            <td>DC/AC naddimenzování</td>
+                            <td>133</td>
+                            <td>%</td>
+                        </tr>
+                        <tr>
+                            <td>Odhadovaná roční výroba</td>
+                            <td>99,6</td>
+                            <td>MWh</td>
+                        </tr>
+                        <tr>
+                            <td>Úspora emisí CO2 (roční)</td>
+                            <td>51,1</td>
+                            <td>t</td>
+                        </tr>
+                        <tr>
+                            <td>Ekvivalent vysazených stromů</td>
+                            <td>2 348</td>
+                            <td>ks</td>
+                        </tr>
+                        <tr>
+                            <td>Performance Ratio</td>
+                            <td>86</td>
+                            <td>%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Distribuce výkonu po polích</h2>
+            <div class="field-distribution">
+                <div class="field-card">
+                    <h4>Pole A</h4>
+                    <p>42 panelů</p>
+                    <p><strong>19,3 kWp</strong></p>
+                    <p>255°, sklon 12°</p>
+                </div>
+                <div class="field-card">
+                    <h4>Pole B</h4>
+                    <p>35 panelů</p>
+                    <p><strong>16,1 kWp</strong></p>
+                    <p>164°, sklon 40°</p>
+                </div>
+                <div class="field-card">
+                    <h4>Pole C</h4>
+                    <p>65 panelů</p>
+                    <p><strong>29,9 kWp</strong></p>
+                    <p>75°, sklon 5°</p>
+                </div>
+                <div class="field-card">
+                    <h4>Pole D</h4>
+                    <p>33 panely</p>
+                    <p><strong>15,2 kWp</strong></p>
+                    <p>253°, sklon 10°</p>
+                </div>
+                <div class="field-card">
+                    <h4>Pole E</h4>
+                    <p>42 panelů</p>
+                    <p><strong>19,3 kWp</strong></p>
+                    <p>75°, sklon 12°</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technická specifikace komponentů</h2>
+            
+            <h3>Fotovoltaické panely (dodává objednatel)</h3>
+            <div class="component-details">
+                <p><strong>Model:</strong> JinkoSolar JKM-460M-60HL4 Tiger Pro 60HC</p>
+                <p><strong>Výkon:</strong> 460 Wp</p>
+                <p><strong>Množství:</strong> 217 ks</p>
+                <p><strong>Rozměry:</strong> 1 955 × 1 134 × 30 mm</p>
+                <p><strong>Hmotnost:</strong> 23,5 kg/panel</p>
+                <p><strong>Celková hmotnost panelů:</strong> 5 099,5 kg</p>
+                <p><strong>Poznámka:</strong> PV moduly si zajišťuje objednatel vlastními kanály</p>
+            </div>
+
+            <h3>Střídače (měniče)</h3>
+            <div class="component-details">
+                <p><strong>Hlavní měnič:</strong> SolarEdge SE50K MC4</p>
+                <p><strong>AC výkon:</strong> 50 kW</p>
+                <p><strong>DC vstup:</strong> 56,12 kW (naddimenzování 112%)</p>
+                <p><strong>VIP cena:</strong> 2 437,42 EUR (67 029 Kč s přirážkou)</p>
+                <br>
+                <p><strong>Doplňkový měnič:</strong> SolarEdge SE25K-M4</p>
+                <p><strong>AC výkon:</strong> 25 kW</p>
+                <p><strong>DC vstup:</strong> 34,12 kW (naddimenzování 136%)</p>
+                <p><strong>VIP cena:</strong> 1 273,51 EUR (35 022 Kč s přirážkou)</p>
+            </div>
+
+            <h3>Optimizéry</h3>
+            <div class="component-details">
+                <p><strong>Model:</strong> SolarEdge S1000-1GM4MBT Power Optimizer</p>
+                <p><strong>Množství:</strong> 110 ks</p>
+                <p><strong>Konfigurace:</strong> Smíšená 2:1 a 1:1 podle stringové konfigurace</p>
+                <p><strong>Funkce:</strong> MPPT optimalizace na úrovni panelů</p>
+                <p><strong>VIP cena:</strong> 48,69 EUR/ks (133 898 Kč celkem s přirážkou)</p>
+            </div>
+
+            <h3>Nosná konstrukce K2 Systems</h3>
+            <div class="component-details">
+                <p><strong>Systém:</strong> K2 MultiRail pro trapézové střechy</p>
+                <p><strong>Celková hmotnost:</strong> 80,9 kg</p>
+                <p><strong>Komponenty:</strong></p>
+                <ul>
+                    <li>188× EndClamp Set 30-31 (14,1 kg)</li>
+                    <li>1 112× Samořezné šrouby 6.0×25 (6,7 kg)</li>
+                    <li>270× MiddleClamp XS Set 30-33 (18,9 kg)</li>
+                    <li>217× TerraGrif K2SZ (0,7 kg)</li>
+                    <li>52× MultiRail 10 (31,7 kg)</li>
+                    <li>28× OneEnd Set 30-42 (2,4 kg)</li>
+                    <li>56× OneMid Set 30-42 (4,4 kg)</li>
+                    <li>1× MultiRail 25 (2,1 kg)</li>
+                </ul>
+            </div>
+
+            <h3>Elektrické komponenty</h3>
+            <div class="component-details">
+                <p><strong>Combiner boxy:</strong> 3 ks</p>
+                <p><strong>DC kabel 10 mm²:</strong> 133 m</p>
+                <p><strong>DC kabel 6 mm²:</strong> 152 m</p>
+                <p><strong>Celková délka kabelů:</strong> 285 m</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Cenová nabídka</h2>
+            <table class="budget-table">
+                <thead>
+                    <tr>
+                        <th>Položka</th>
+                        <th>Specifikace</th>
+                        <th class="price">Cena bez DPH</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>01</strong></td>
+                        <td><strong>Montáž fotovoltaických panelů</strong></td>
+                        <td class="price"><strong>90 000,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Montáž 217 ks panelů na 5 polích (A-E)</td>
+                        <td class="price">90 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="font-style: italic; color: #666;">Poznámka: PV moduly JinkoSolar JKM-460M-60HL4 (217 ks) si zajišťuje objednatel</td>
+                        <td class="price"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>02</strong></td>
+                        <td><strong>Střídače SolarEdge</strong></td>
+                        <td class="price"><strong>102 051,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• SolarEdge SE50K MC4 + montáž</td>
+                        <td class="price">67 029,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• SolarEdge SE25K-M4 + montáž</td>
+                        <td class="price">35 022,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td><strong>03</strong></td>
+                        <td><strong>Power optimizéry</strong></td>
+                        <td class="price"><strong>147 287,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• SolarEdge S1000-1GM4MBT optimizéry (110 ks)</td>
+                        <td class="price">133 898,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Instalace a konfigurace optimizérů</td>
+                        <td class="price">13 389,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td><strong>04</strong></td>
+                        <td><strong>Nosná konstrukce K2 Systems</strong></td>
+                        <td class="price"><strong>165 000,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• K2 MultiRail kompletní sada pro 5 polí</td>
+                        <td class="price">95 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Montáž konstrukce na trapézové střechy</td>
+                        <td class="price">70 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td><strong>05</strong></td>
+                        <td><strong>Elektroinstalace</strong></td>
+                        <td class="price"><strong>120 000,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• DC kabeláž (285 m) a combiner boxy (3 ks)</td>
+                        <td class="price">45 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• AC kabeláž a rozvaděče</td>
+                        <td class="price">50 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Elektroinstalační práce a zapojení</td>
+                        <td class="price">25 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td><strong>06</strong></td>
+                        <td><strong>Uvedení do provozu a servis</strong></td>
+                        <td class="price"><strong>59 174,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Konfigurace SolarEdge systému</td>
+                        <td class="price">15 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• První uvedení do provozu a testování</td>
+                        <td class="price">20 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Dokumentace a školení obsluhy</td>
+                        <td class="price">10 000,00 Kč</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>• Projektové řízení a koordinace</td>
+                        <td class="price">14 174,00 Kč</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="2"><strong>CELKEM bez DPH</strong></td>
+                        <td class="price"><strong>683 512,00 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">DPH 21%</td>
+                        <td class="price">143 538,00 Kč</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="2"><strong>CELKEM s DPH</strong></td>
+                        <td class="price"><strong>827 050,00 Kč</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Podmínky nabídky</h2>
+            <div class="energy-chart">
+                <h4>Základní podmínky:</h4>
+                <ul>
+                    <li>Nabídka je platná 30 dnů od data vystavení</li>
+                    <li>Dodací lhůta: 8-10 týdnů od podpisu smlouvy</li>
+                    <li>Doprava a jeřábová technika jsou zahrnuty v cenách</li>
+                    <li>Záruční doba: 5 let na montáž, 12 let na FV panely, 12 let na střídače</li>
+                    <li>Platební podmínky: 30% záloha, 70% při předání díla</li>
+                </ul>
+                
+                <h4>Specifikace instalace:</h4>
+                <ul>
+                    <li><strong>5 instalačních polí (A-E)</strong> na různých částech střešních ploch</li>
+                    <li><strong>Trapézové střechy</strong> s různými orientacemi a sklony</li>
+                    <li><strong>K2 MultiRail systém</strong> s mechanickým kotvením</li>
+                    <li><strong>SolarEdge technologie</strong> s optimalizací na úrovni panelů</li>
+                    <li><strong>DC kabeláž 6mm² a 10mm²</strong> podle stringové konfigurace</li>
+                    <li><strong>Monitoring systém</strong> pro sledování výroby jednotlivých panelů</li>
+                </ul>
+                
+                <h4>V ceně je zahrnuto:</h4>
+                <ul>
+                    <li>Kompletní dodávka všech komponentů podle SolarEdge Designer</li>
+                    <li>K2 Systems nosná konstrukce dle konfigurace</li>
+                    <li>Instalace na 5 polích s různými orientacemi</li>
+                    <li>SolarEdge monitoring a konfigurace systému</li>
+                    <li>Elektroinstalace včetně rozvaděčů a kabeláže</li>
+                    <li>Uvedení do provozu a komplexní testování</li>
+                    <li>Dokumentace skutečného provedení</li>
+                    <li>Školení obsluhy a předání monitoringu</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h2>Kontaktní údaje</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div class="contact-card">
+                    <h4>Zhotovitel (montáž a servis)</h4>
+                    <p><strong>iSolar PV s.r.o.</strong></p>
+                    <p>IČO: 14281597</p>
+                    <p>Hronovická 663</p>
+                    <p>Pardubice 53002</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Objednatel</h4>
+                    <p><strong>Green Technology s.r.o.</strong></p>
+                    <p>kpt. Bartoše 409</p>
+                    <p>Pardubice 530 09</p>
+                    <p>Česká Republika</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Kontaktní osoba</h4>
+                    <p><strong>Kalabis Tomáš</strong></p>
+                    <p>Projektový manažer</p>
+                    <p>Email: info@isolar.cz</p>
+                    <p>Telefon: +420 XXX XXX XXX</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Nabídka vytvořena na základě SolarEdge Designer konfigurace (ID: 8903176288379021)</p>
+            <p>© 2025 iSolar PV s.r.o. - Profesionální instalace fotovoltaických systémů</p>
+        </div>
+    </div>
+
+    <script>
+        // Automatické načtení dat z kalkulátoru při otevření stránky
+        document.addEventListener('DOMContentLoaded', function() {
+            // Zkontrolovat, zda jsou k dispozici data z kalkulátoru
+            const calculatorData = localStorage.getItem('calculatorData');
+            
+            if (calculatorData) {
+                try {
+                    const data = JSON.parse(calculatorData);
+                    updateQuoteWithCalculatorData(data);
+                    
+                    // Zobrazit oznámení o aktualizaci
+                    showUpdateNotification();
+                    
+                    // Vymazat data z localStorage po použití
+                    localStorage.removeItem('calculatorData');
+                } catch (error) {
+                    console.error('Chyba při načítání dat z kalkulátoru:', error);
+                }
+            }
+        });
+
+        function updateQuoteWithCalculatorData(data) {
+            // Mapování ID z kalkulátoru na ceny v nabídce
+            const priceMapping = {
+                // SolarEdge komponenty
+                'se50k': ['SE50K MC4 + montáž', data.se50k.final + data.inverter_mount.final * 0.7],
+                'se25k': ['SE25K-M4 + montáž', data.se25k.final + data.inverter_mount.final * 0.3],
+                'optimizers': ['S1000 optimizéry + instalace', data.optimizers.final + data.optimizer_mount.final],
+                
+                // Konstrukce
+                'k2_total': ['K2 konstrukce celkem', data.k2_components.final + data.k2_mount.final],
+                
+                // Rozvaděče
+                'panels_total': ['Rozvaděče celkem', data.dc_combiners.final + data.ac_panels.final + data.panels_mount.final],
+                
+                // Elektroinstalace
+                'electrical_total': ['Elektroinstalace celkem', data.dc_cables.final + data.ac_cables.final + data.electrical_work.final],
+                
+                // Servis
+                'service_total': ['Servis celkem', data.config.final + data.commissioning.final + data.documentation.final + data.project.final]
+            };
+
+            // Aktualizovat jednotlivé ceny v tabulce
+            updatePriceInTable('Střídače SolarEdge', Math.round(data.se50k.final + data.se25k.final));
+            updatePriceInTable('Power optimizéry', Math.round(data.optimizers.final + data.optimizer_mount.final));
+            updatePriceInTable('Nosná konstrukce K2 Systems', Math.round(data.k2_components.final + data.k2_mount.final));
+            updatePriceInTable('Montáž fotovoltaických panelů', Math.round(data.panel_mount.final));
+            
+            // Aktualizovat celkové ceny
+            const totalWithoutVat = Math.round(data.totals.withoutVat);
+            const vat = Math.round(data.totals.vat);
+            const totalWithVat = Math.round(data.totals.withVat);
+            
+            updateTotalPrices(totalWithoutVat, vat, totalWithVat);
+        }
+
+        function updatePriceInTable(itemName, newPrice) {
+            // Najít všechny buňky s cenami v tabulce
+            const priceCells = document.querySelectorAll('.price');
+            
+            priceCells.forEach(cell => {
+                const row = cell.closest('tr');
+                if (row) {
+                    const itemCell = row.querySelector('td:first-child, td:nth-child(2)');
+                    if (itemCell && itemCell.textContent.includes(itemName)) {
+                        cell.textContent = formatPrice(newPrice) + ' Kč';
+                    }
+                }
+            });
+        }
+
+        function updateTotalPrices(withoutVat, vat, withVat) {
+            // Najít a aktualizovat celkové ceny
+            const totalRows = document.querySelectorAll('.total-row');
+            
+            totalRows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells.length > 0) {
+                    const firstCell = cells[0];
+                    if (firstCell.textContent.includes('CELKEM bez DPH')) {
+                        const priceCell = row.querySelector('.price');
+                        if (priceCell) priceCell.innerHTML = '<strong>' + formatPrice(withoutVat) + ' Kč</strong>';
+                    } else if (firstCell.textContent.includes('CELKEM s DPH')) {
+                        const priceCell = row.querySelector('.price');
+                        if (priceCell) priceCell.innerHTML = '<strong>' + formatPrice(withVat) + ' Kč</strong>';
+                    }
+                }
+            });
+            
+            // Aktualizovat DPH řádek
+            const vatRows = document.querySelectorAll('tr');
+            vatRows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells.length > 0 && cells[0].textContent.includes('DPH 21%')) {
+                    const priceCell = row.querySelector('.price');
+                    if (priceCell) priceCell.textContent = formatPrice(vat) + ' Kč';
+                }
+            });
+        }
+
+        function formatPrice(price) {
+            return Math.round(price).toLocaleString('cs-CZ');
+        }
+
+        function showUpdateNotification() {
+            // Vytvořit a zobrazit oznámení o aktualizaci
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #28a745;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                z-index: 1000;
+                font-family: inherit;
+                font-size: 14px;
+                max-width: 300px;
+            `;
+            notification.innerHTML = '✅ Nabídka byla aktualizována daty z kalkulátoru!';
+            
+            document.body.appendChild(notification);
+            
+            // Automaticky odstranit oznámení po 4 sekundách
+            setTimeout(() => {
+                notification.remove();
+            }, 4000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulátor nabídky - ASV Solnice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a72 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        .calculator-section, .preview-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        
+        .section-title {
+            color: #2c5aa0;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2c5aa0;
+        }
+        
+        .item-group {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .item-group h3 {
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .cost-item {
+            display: grid;
+            grid-template-columns: 2fr 0.8fr 0.6fr 1fr 1fr 1fr;
+            gap: 10px;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .cost-item-header {
+            display: grid;
+            grid-template-columns: 2fr 0.8fr 0.6fr 1fr 1fr 1fr;
+            gap: 10px;
+            align-items: center;
+            padding: 10px 0;
+            font-weight: bold;
+            color: #2c5aa0;
+            border-bottom: 2px solid #2c5aa0;
+            margin-bottom: 10px;
+        }
+        
+        .cost-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-label {
+            font-weight: 500;
+        }
+        
+        .input-field {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        .input-field[autocomplete="off"]::-webkit-contacts-auto-fill-button {
+            visibility: hidden;
+            display: none !important;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: #2c5aa0;
+            box-shadow: 0 0 0 2px rgba(44, 90, 160, 0.1);
+        }
+        
+        .final-price {
+            font-weight: bold;
+            color: #2c5aa0;
+            font-size: 16px;
+        }
+        
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background 0.2s;
+        }
+        
+        .btn:hover {
+            background: #1e3a72;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+        
+        .preview-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .preview-table th {
+            background: #2c5aa0;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .preview-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .preview-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .total-row {
+            background: #2c5aa0 !important;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .price-cell {
+            text-align: right;
+            font-weight: bold;
+            color: #2c5aa0;
+        }
+        
+        .total-row .price-cell {
+            color: white;
+        }
+        
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c5aa0;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 1200px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cost-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .item-label {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Kalkulátor nabídky FVE</h1>
+            <p>ASV Solnice - Nákladová kalkulace s konfigurovatelnou přirážkou</p>
+        </div>
+
+        <div class="content">
+            <!-- KALKULÁTOR -->
+            <div class="calculator-section">
+                <h2 class="section-title">💰 Nákladová kalkulace</h2>
+                
+                <!-- SolarEdge komponenty -->
+                <div class="item-group">
+                    <h3>🔌 SolarEdge komponenty</h3>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">SE50K MC4 střídač</div>
+                        <input type="number" class="input-field" id="se50k_cost" value="60934" placeholder="Náklad" autocomplete="off">
+                        <input type="number" class="input-field" id="se50k_margin" value="10" placeholder="Přirážka %" autocomplete="off">
+                        <div class="final-price" id="se50k_final">67 027 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">SE25K-M4 střídač</div>
+                        <input type="number" class="input-field" id="se25k_cost" value="31838" placeholder="Náklad">
+                        <input type="number" class="input-field" id="se25k_margin" value="10" placeholder="Přirážka %">
+                        <div class="final-price" id="se25k_final">35 022 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">S1000 optimizéry (110 ks)</div>
+                        <input type="number" class="input-field" id="optimizers_cost" value="121725" placeholder="Náklad">
+                        <input type="number" class="input-field" id="optimizers_margin" value="10" placeholder="Přirážka %">
+                        <div class="final-price" id="optimizers_final">133 898 Kč</div>
+                    </div>
+                </div>
+
+                <!-- Montážní práce -->
+                <div class="item-group">
+                    <h3>🔧 Montážní práce</h3>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Montáž FV panelů (217 ks)</div>
+                        <input type="number" class="input-field" id="panel_mount_cost" value="60000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="panel_mount_margin" value="50" placeholder="Přirážka %">
+                        <div class="final-price" id="panel_mount_final">90 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Montáž střídačů</div>
+                        <input type="number" class="input-field" id="inverter_mount_cost" value="8000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="inverter_mount_margin" value="25" placeholder="Přirážka %">
+                        <div class="final-price" id="inverter_mount_final">10 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Montáž optimizérů</div>
+                        <input type="number" class="input-field" id="optimizer_mount_cost" value="8000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="optimizer_mount_margin" value="67" placeholder="Přirážka %">
+                        <div class="final-price" id="optimizer_mount_final">13 360 Kč</div>
+                    </div>
+                </div>
+
+                <!-- K2 konstrukce -->
+                <div class="item-group">
+                    <h3>🏗️ Nosná konstrukce</h3>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">K2 MultiRail komponenty</div>
+                        <input type="number" class="input-field" id="k2_components_cost" value="70333" placeholder="Náklad" autocomplete="off">
+                        <input type="number" class="input-field" id="k2_components_margin" value="31" placeholder="Přirážka %" autocomplete="off">
+                        <div class="final-price" id="k2_components_final">92 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Montáž K2 konstrukce</div>
+                        <input type="number" class="input-field" id="k2_mount_cost" value="50000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="k2_mount_margin" value="46" placeholder="Přirážka %">
+                        <div class="final-price" id="k2_mount_final">73 000 Kč</div>
+                    </div>
+                </div>
+
+                <!-- Rozvaděče a combiner boxy -->
+                <div class="item-group">
+                    <h3>📦 Rozvaděče a combiner boxy</h3>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">DC combiner boxy (3 ks)</div>
+                        <input type="number" class="input-field" id="dc_combiners_cost" value="15000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="dc_combiners_margin" value="50" placeholder="Přirážka %">
+                        <div class="final-price" id="dc_combiners_final">22 500 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">AC rozvaděče RFVE</div>
+                        <input type="number" class="input-field" id="ac_panels_cost" value="25000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="ac_panels_margin" value="40" placeholder="Přirážka %">
+                        <div class="final-price" id="ac_panels_final">35 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Montáž rozvaděčů</div>
+                        <input type="number" class="input-field" id="panels_mount_cost" value="5000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="panels_mount_margin" value="50" placeholder="Přirážka %">
+                        <div class="final-price" id="panels_mount_final">7 500 Kč</div>
+                    </div>
+                </div>
+
+                <!-- Kabeláž a elektroinstalace -->
+                <div class="item-group">
+                    <h3>⚡ Kabeláž a elektroinstalace</h3>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">DC kabeláž 6mm² a 10mm²</div>
+                        <input type="number" class="input-field" id="dc_cables_cost" value="20000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="dc_cables_margin" value="50" placeholder="Přirážka %">
+                        <div class="final-price" id="dc_cables_final">30 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">AC kabeláž a žlaby</div>
+                        <input type="number" class="input-field" id="ac_cables_cost" value="25000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="ac_cables_margin" value="40" placeholder="Přirážka %">
+                        <div class="final-price" id="ac_cables_final">35 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Elektroinstalační práce</div>
+                        <input type="number" class="input-field" id="electrical_work_cost" value="15000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="electrical_work_margin" value="67" placeholder="Přirážka %">
+                        <div class="final-price" id="electrical_work_final">25 000 Kč</div>
+                    </div>
+                </div>
+
+                <!-- Servis a uvedení do provozu -->
+                <div class="item-group">
+                    <h3>🔧 Servis a uvedení do provozu</h3>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Konfigurace SolarEdge</div>
+                        <input type="number" class="input-field" id="config_cost" value="8000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="config_margin" value="88" placeholder="Přirážka %">
+                        <div class="final-price" id="config_final">15 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Uvedení do provozu</div>
+                        <input type="number" class="input-field" id="commissioning_cost" value="12000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="commissioning_margin" value="67" placeholder="Přirážka %">
+                        <div class="final-price" id="commissioning_final">20 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Dokumentace a školení</div>
+                        <input type="number" class="input-field" id="documentation_cost" value="6000" placeholder="Náklad">
+                        <input type="number" class="input-field" id="documentation_margin" value="67" placeholder="Přirážka %">
+                        <div class="final-price" id="documentation_final">10 000 Kč</div>
+                    </div>
+                    
+                    <div class="cost-item">
+                        <div class="item-label">Projektové řízení</div>
+                        <input type="number" class="input-field" id="project_cost" value="8500" placeholder="Náklad">
+                        <input type="number" class="input-field" id="project_margin" value="67" placeholder="Přirážka %">
+                        <div class="final-price" id="project_final">14 174 Kč</div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn" onclick="calculatePrices()">🔄 Přepočítat</button>
+                    <button class="btn btn-secondary" onclick="resetToDefaults()">↩️ Výchozí hodnoty</button>
+                    <button class="btn" onclick="exportToQuote()">📝 Aktualizovat nabídku</button>
+                </div>
+            </div>
+
+            <!-- NÁHLED -->
+            <div class="preview-section">
+                <h2 class="section-title">📊 Náhled nabídky</h2>
+                
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total_cost">418 061</div>
+                        <div class="stat-label">Náklady celkem</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="total_margin">265 451</div>
+                        <div class="stat-label">Přirážka celkem</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="margin_percent">63.5%</div>
+                        <div class="stat-label">Průměrná marže</div>
+                    </div>
+                </div>
+
+                <table class="preview-table">
+                    <thead>
+                        <tr>
+                            <th>Položka</th>
+                            <th>Náklad</th>
+                            <th>Marže</th>
+                            <th>Prodejní cena</th>
+                        </tr>
+                    </thead>
+                    <tbody id="preview_tbody">
+                        <!-- Dynamicky generováno -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td><strong>CELKEM bez DPH</strong></td>
+                            <td class="price-cell" id="preview_total_cost"><strong>418 061 Kč</strong></td>
+                            <td class="price-cell" id="preview_total_margin"><strong>265 451 Kč</strong></td>
+                            <td class="price-cell" id="preview_total_final"><strong>683 512 Kč</strong></td>
+                        </tr>
+                        <tr>
+                            <td>DPH 21%</td>
+                            <td></td>
+                            <td></td>
+                            <td class="price-cell" id="preview_vat">143 538 Kč</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td><strong>CELKEM s DPH</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td class="price-cell" id="preview_total_with_vat"><strong>827 050 Kč</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Definice všech položek
+        const items = [
+            {id: 'se50k', name: 'SE50K MC4 střídač', cost: 60934, margin: 10},
+            {id: 'se25k', name: 'SE25K-M4 střídač', cost: 31838, margin: 10},
+            {id: 'optimizers', name: 'S1000 optimizéry (110 ks)', cost: 121725, margin: 10},
+            {id: 'panel_mount', name: 'Montáž FV panelů', cost: 60000, margin: 50},
+            {id: 'inverter_mount', name: 'Montáž střídačů', cost: 8000, margin: 25},
+            {id: 'optimizer_mount', name: 'Montáž optimizérů', cost: 8000, margin: 67},
+            {id: 'k2_components', name: 'K2 MultiRail komponenty', cost: 70333, margin: 31},
+            {id: 'k2_mount', name: 'Montáž K2 konstrukce', cost: 50000, margin: 46},
+            {id: 'dc_combiners', name: 'DC combiner boxy (3 ks)', cost: 15000, margin: 50},
+            {id: 'ac_panels', name: 'AC rozvaděče RFVE', cost: 25000, margin: 40},
+            {id: 'panels_mount', name: 'Montáž rozvaděčů', cost: 5000, margin: 50},
+            {id: 'dc_cables', name: 'DC kabeláž 6mm² a 10mm²', cost: 20000, margin: 50},
+            {id: 'ac_cables', name: 'AC kabeláž a žlaby', cost: 25000, margin: 40},
+            {id: 'electrical_work', name: 'Elektroinstalační práce', cost: 15000, margin: 67},
+            {id: 'config', name: 'Konfigurace SolarEdge', cost: 8000, margin: 88},
+            {id: 'commissioning', name: 'Uvedení do provozu', cost: 12000, margin: 67},
+            {id: 'documentation', name: 'Dokumentace a školení', cost: 6000, margin: 67},
+            {id: 'project', name: 'Projektové řízení', cost: 8500, margin: 67}
+        ];
+
+        function formatNumber(num) {
+            return Math.round(num).toLocaleString('cs-CZ');
+        }
+
+        function calculatePrices() {
+            let totalCost = 0;
+            let totalFinal = 0;
+            let previewRows = '';
+
+            items.forEach(item => {
+                const cost = parseFloat(document.getElementById(item.id + '_cost').value) || 0;
+                const margin = parseFloat(document.getElementById(item.id + '_margin').value) || 0;
+                const final = cost * (1 + margin / 100);
+                
+                // Aktualizace finální ceny
+                document.getElementById(item.id + '_final').textContent = formatNumber(final) + ' Kč';
+                
+                // Přidání do celkových součtů
+                totalCost += cost;
+                totalFinal += final;
+                
+                // Přidání řádku do náhledu
+                previewRows += `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td class="price-cell">${formatNumber(cost)} Kč</td>
+                        <td class="price-cell">${formatNumber(final - cost)} Kč</td>
+                        <td class="price-cell">${formatNumber(final)} Kč</td>
+                    </tr>
+                `;
+            });
+
+            // Aktualizace summary statistik
+            const totalMargin = totalFinal - totalCost;
+            const marginPercent = totalCost > 0 ? (totalMargin / totalCost * 100) : 0;
+            
+            document.getElementById('total_cost').textContent = formatNumber(totalCost);
+            document.getElementById('total_margin').textContent = formatNumber(totalMargin);
+            document.getElementById('margin_percent').textContent = marginPercent.toFixed(1) + '%';
+
+            // Aktualizace náhledu tabulky
+            document.getElementById('preview_tbody').innerHTML = previewRows;
+            document.getElementById('preview_total_cost').innerHTML = '<strong>' + formatNumber(totalCost) + ' Kč</strong>';
+            document.getElementById('preview_total_margin').innerHTML = '<strong>' + formatNumber(totalMargin) + ' Kč</strong>';
+            document.getElementById('preview_total_final').innerHTML = '<strong>' + formatNumber(totalFinal) + ' Kč</strong>';
+            
+            // DPH a celkem s DPH
+            const vat = totalFinal * 0.21;
+            const totalWithVat = totalFinal + vat;
+            document.getElementById('preview_vat').textContent = formatNumber(vat) + ' Kč';
+            document.getElementById('preview_total_with_vat').innerHTML = '<strong>' + formatNumber(totalWithVat) + ' Kč</strong>';
+        }
+
+        function resetToDefaults() {
+            items.forEach(item => {
+                document.getElementById(item.id + '_cost').value = item.cost;
+                document.getElementById(item.id + '_margin').value = item.margin;
+            });
+            calculatePrices();
+        }
+
+        function exportToQuote() {
+            // Přepočítat všechny ceny před exportem
+            calculatePrices();
+            
+            // Shromáždit všechny data z kalkulátoru
+            const exportData = {};
+            let totalWithoutVat = 0;
+            
+            items.forEach(item => {
+                const cost = parseFloat(document.getElementById(item.id + '_cost').value) || 0;
+                const margin = parseFloat(document.getElementById(item.id + '_margin').value) || 0;
+                const final = cost * (1 + margin / 100);
+                
+                exportData[item.id] = {
+                    name: item.name,
+                    cost: cost,
+                    margin: margin,
+                    final: final
+                };
+                
+                totalWithoutVat += final;
+            });
+            
+            // Výpočet DPH a celkové ceny
+            const vat = totalWithoutVat * 0.21;
+            const totalWithVat = totalWithoutVat + vat;
+            
+            exportData.totals = {
+                withoutVat: totalWithoutVat,
+                vat: vat,
+                withVat: totalWithVat
+            };
+            
+            // Uložit data do localStorage pro přenos do hlavní nabídky
+            localStorage.setItem('calculatorData', JSON.stringify(exportData));
+            
+            // Otevřít hlavní nabídku v novém okně/tabu
+            const newWindow = window.open('nabidka-fve-asv-solnice.html', '_blank');
+            
+            // Alternativně: navigovat v současném okně
+            // window.location.href = 'nabidka-fve-asv-solnice.html';
+            
+            alert('Data byla exportována! Hlavní nabídka se otevře v novém okně s aktualizovanými cenami.');
+        }
+
+        // Event listenery pro automatické přepočítávání
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('.input-field');
+            inputs.forEach(input => {
+                input.addEventListener('input', calculatePrices);
+            });
+            
+            // Počáteční výpočet
+            calculatePrices();
+        });
+    </script>
+</body>
+</html>

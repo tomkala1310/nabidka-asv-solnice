@@ -2,6 +2,9 @@ name: Aktualizace nabídky
 
 on:
   workflow_dispatch: # Ruční spuštění
+  push:
+    paths:
+      - 'prices.json' # Spustit při změně prices.json
   schedule:
     - cron: '0 8 * * 1' # Každé pondělí v 8:00
 
@@ -18,14 +21,6 @@ jobs:
           node-version: '18'
           
       - name: Aktualizace nabídky
-        env:
-          # Ceny se nastavují jako GitHub Secrets
-          SE50K_PRICE: ${{ secrets.SE50K_PRICE }}
-          SE25K_PRICE: ${{ secrets.SE25K_PRICE }}
-          OPTIMIZERS_PRICE: ${{ secrets.OPTIMIZERS_PRICE }}
-          K2_COMPONENTS_PRICE: ${{ secrets.K2_COMPONENTS_PRICE }}
-          TOTAL_WITHOUT_VAT: ${{ secrets.TOTAL_WITHOUT_VAT }}
-          TOTAL_WITH_VAT: ${{ secrets.TOTAL_WITH_VAT }}
         run: |
           # JavaScript skript pro aktualizaci cen
           node .github/scripts/update-prices.js
