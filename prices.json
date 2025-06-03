@@ -1,35 +1,1921 @@
-{
-  "lastUpdated": "2025-06-04T12:00:00Z",
-  "items": {
-    "se50k": {
-      "qty": 1,
-      "unit": "ks", 
-      "total": 67027
-    },
-    "se25k": {
-      "qty": 1,
-      "unit": "ks",
-      "total": 35022
-    },
-    "optimizers": {
-      "qty": 110,
-      "unit": "ks", 
-      "total": 133898
-    },
-    "k2_components": {
-      "qty": 1,
-      "unit": "soubor",
-      "total": 92136
-    },
-    "k2_mount": {
-      "qty": 217,
-      "unit": "ks",
-      "total": 73000
-    }
-  },
-  "totals": {
-    "withoutVat": 794013,
-    "vat": 166743,
-    "withVat": 960756
-  }
-}
+[{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 284,
+	"startColumn": 26,
+	"endLineNumber": 284,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 285,
+	"startColumn": 26,
+	"endLineNumber": 285,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 289,
+	"startColumn": 26,
+	"endLineNumber": 289,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 290,
+	"startColumn": 26,
+	"endLineNumber": 290,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 296,
+	"startColumn": 26,
+	"endLineNumber": 296,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 297,
+	"startColumn": 26,
+	"endLineNumber": 297,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 301,
+	"startColumn": 26,
+	"endLineNumber": 301,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 302,
+	"startColumn": 26,
+	"endLineNumber": 302,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 308,
+	"startColumn": 26,
+	"endLineNumber": 308,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 309,
+	"startColumn": 26,
+	"endLineNumber": 309,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 313,
+	"startColumn": 26,
+	"endLineNumber": 313,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 314,
+	"startColumn": 26,
+	"endLineNumber": 314,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 334,
+	"startColumn": 26,
+	"endLineNumber": 334,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 335,
+	"startColumn": 26,
+	"endLineNumber": 335,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 340,
+	"startColumn": 26,
+	"endLineNumber": 340,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 341,
+	"startColumn": 26,
+	"endLineNumber": 341,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 347,
+	"startColumn": 26,
+	"endLineNumber": 347,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 348,
+	"startColumn": 26,
+	"endLineNumber": 348,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 353,
+	"startColumn": 26,
+	"endLineNumber": 353,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 354,
+	"startColumn": 26,
+	"endLineNumber": 354,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 360,
+	"startColumn": 26,
+	"endLineNumber": 360,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 361,
+	"startColumn": 26,
+	"endLineNumber": 361,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 366,
+	"startColumn": 26,
+	"endLineNumber": 366,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 367,
+	"startColumn": 26,
+	"endLineNumber": 367,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 387,
+	"startColumn": 26,
+	"endLineNumber": 387,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 388,
+	"startColumn": 26,
+	"endLineNumber": 388,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 392,
+	"startColumn": 26,
+	"endLineNumber": 392,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 393,
+	"startColumn": 26,
+	"endLineNumber": 393,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 399,
+	"startColumn": 26,
+	"endLineNumber": 399,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 400,
+	"startColumn": 26,
+	"endLineNumber": 400,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 405,
+	"startColumn": 26,
+	"endLineNumber": 405,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 406,
+	"startColumn": 26,
+	"endLineNumber": 406,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 426,
+	"startColumn": 26,
+	"endLineNumber": 426,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 427,
+	"startColumn": 26,
+	"endLineNumber": 427,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 431,
+	"startColumn": 26,
+	"endLineNumber": 431,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 432,
+	"startColumn": 26,
+	"endLineNumber": 432,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 438,
+	"startColumn": 26,
+	"endLineNumber": 438,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 439,
+	"startColumn": 26,
+	"endLineNumber": 439,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 443,
+	"startColumn": 26,
+	"endLineNumber": 443,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 444,
+	"startColumn": 26,
+	"endLineNumber": 444,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 450,
+	"startColumn": 26,
+	"endLineNumber": 450,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 451,
+	"startColumn": 26,
+	"endLineNumber": 451,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 455,
+	"startColumn": 26,
+	"endLineNumber": 455,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 456,
+	"startColumn": 26,
+	"endLineNumber": 456,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 462,
+	"startColumn": 26,
+	"endLineNumber": 462,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 463,
+	"startColumn": 26,
+	"endLineNumber": 463,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 467,
+	"startColumn": 26,
+	"endLineNumber": 467,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 468,
+	"startColumn": 26,
+	"endLineNumber": 468,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 474,
+	"startColumn": 26,
+	"endLineNumber": 474,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 475,
+	"startColumn": 26,
+	"endLineNumber": 475,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 479,
+	"startColumn": 26,
+	"endLineNumber": 479,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 480,
+	"startColumn": 26,
+	"endLineNumber": 480,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 486,
+	"startColumn": 26,
+	"endLineNumber": 486,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 487,
+	"startColumn": 26,
+	"endLineNumber": 487,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 491,
+	"startColumn": 26,
+	"endLineNumber": 491,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 492,
+	"startColumn": 26,
+	"endLineNumber": 492,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 498,
+	"startColumn": 26,
+	"endLineNumber": 498,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 499,
+	"startColumn": 26,
+	"endLineNumber": 499,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 503,
+	"startColumn": 26,
+	"endLineNumber": 503,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 504,
+	"startColumn": 26,
+	"endLineNumber": 504,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 510,
+	"startColumn": 26,
+	"endLineNumber": 510,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 511,
+	"startColumn": 26,
+	"endLineNumber": 511,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 516,
+	"startColumn": 26,
+	"endLineNumber": 516,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 517,
+	"startColumn": 26,
+	"endLineNumber": 517,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 537,
+	"startColumn": 26,
+	"endLineNumber": 537,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 538,
+	"startColumn": 26,
+	"endLineNumber": 538,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 543,
+	"startColumn": 26,
+	"endLineNumber": 543,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 544,
+	"startColumn": 26,
+	"endLineNumber": 544,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 550,
+	"startColumn": 26,
+	"endLineNumber": 550,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 551,
+	"startColumn": 26,
+	"endLineNumber": 551,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 556,
+	"startColumn": 26,
+	"endLineNumber": 556,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 557,
+	"startColumn": 26,
+	"endLineNumber": 557,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 563,
+	"startColumn": 26,
+	"endLineNumber": 563,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 564,
+	"startColumn": 26,
+	"endLineNumber": 564,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 568,
+	"startColumn": 26,
+	"endLineNumber": 568,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 569,
+	"startColumn": 26,
+	"endLineNumber": 569,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 575,
+	"startColumn": 26,
+	"endLineNumber": 575,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 576,
+	"startColumn": 26,
+	"endLineNumber": 576,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 580,
+	"startColumn": 26,
+	"endLineNumber": 580,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 581,
+	"startColumn": 26,
+	"endLineNumber": 581,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 587,
+	"startColumn": 26,
+	"endLineNumber": 587,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 588,
+	"startColumn": 26,
+	"endLineNumber": 588,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 592,
+	"startColumn": 26,
+	"endLineNumber": 592,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 593,
+	"startColumn": 26,
+	"endLineNumber": 593,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 613,
+	"startColumn": 26,
+	"endLineNumber": 613,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 614,
+	"startColumn": 26,
+	"endLineNumber": 614,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 618,
+	"startColumn": 26,
+	"endLineNumber": 618,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 619,
+	"startColumn": 26,
+	"endLineNumber": 619,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 639,
+	"startColumn": 26,
+	"endLineNumber": 639,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 640,
+	"startColumn": 26,
+	"endLineNumber": 640,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 644,
+	"startColumn": 26,
+	"endLineNumber": 644,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 645,
+	"startColumn": 26,
+	"endLineNumber": 645,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 651,
+	"startColumn": 26,
+	"endLineNumber": 651,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 652,
+	"startColumn": 26,
+	"endLineNumber": 652,
+	"endColumn": 32
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 656,
+	"startColumn": 26,
+	"endLineNumber": 656,
+	"endColumn": 31
+},{
+	"resource": "/Users/tkalabis/Documents/Projekty/nabidka-asv-solnice/rozpocet-kalkulace.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 657,
+	"startColumn": 26,
+	"endLineNumber": 657,
+	"endColumn": 31
+}]
