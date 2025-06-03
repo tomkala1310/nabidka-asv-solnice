@@ -1,0 +1,35 @@
+{
+  "lastUpdated": "2025-06-04T12:00:00Z",
+  "items": {
+    "se50k": {
+      "qty": 1,
+      "unit": "ks", 
+      "total": 67027
+    },
+    "se25k": {
+      "qty": 1,
+      "unit": "ks",
+      "total": 35022
+    },
+    "optimizers": {
+      "qty": 110,
+      "unit": "ks", 
+      "total": 133898
+    },
+    "k2_components": {
+      "qty": 1,
+      "unit": "soubor",
+      "total": 92136
+    },
+    "k2_mount": {
+      "qty": 217,
+      "unit": "ks",
+      "total": 73000
+    }
+  },
+  "totals": {
+    "withoutVat": 794013,
+    "vat": 166743,
+    "withVat": 960756
+  }
+}

@@ -1,0 +1,43 @@
+name: Aktualizace nabídky
+
+on:
+  workflow_dispatch: # Ruční spuštění
+  schedule:
+    - cron: '0 8 * * 1' # Každé pondělí v 8:00
+
+jobs:
+  update-quote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kód
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Aktualizace nabídky
+        env:
+          # Ceny se nastavují jako GitHub Secrets
+          SE50K_PRICE: ${{ secrets.SE50K_PRICE }}
+          SE25K_PRICE: ${{ secrets.SE25K_PRICE }}
+          OPTIMIZERS_PRICE: ${{ secrets.OPTIMIZERS_PRICE }}
+          K2_COMPONENTS_PRICE: ${{ secrets.K2_COMPONENTS_PRICE }}
+          TOTAL_WITHOUT_VAT: ${{ secrets.TOTAL_WITHOUT_VAT }}
+          TOTAL_WITH_VAT: ${{ secrets.TOTAL_WITH_VAT }}
+        run: |
+          # JavaScript skript pro aktualizaci cen
+          node .github/scripts/update-prices.js
+          
+      - name: Commit a push změn
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add index.html
+          if git diff --staged --quiet; then
+            echo "Žádné změny k commitu"
+          else
+            git commit -m "🤖 Automatická aktualizace cen nabídky"
+            git push
+          fi
