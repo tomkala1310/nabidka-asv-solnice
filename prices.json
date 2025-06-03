@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2025-06-04T12:00:00Z",
+  "lastUpdated": "2025-06-03T23:47:52.696Z",
   "items": {
     "se50k": {
       "qty": 1,
-      "unit": "ks", 
+      "unit": "ks",
       "total": 67027
     },
     "se25k": {
@@ -13,23 +13,118 @@
     },
     "optimizers": {
       "qty": 110,
-      "unit": "ks", 
-      "total": 133898
+      "unit": "ks",
+      "total": 133947
+    },
+    "panel_mount": {
+      "qty": 217,
+      "unit": "ks",
+      "total": 97650
+    },
+    "inverter_mount": {
+      "qty": 2,
+      "unit": "ks",
+      "total": 25000
+    },
+    "optimizer_mount": {
+      "qty": 110,
+      "unit": "ks",
+      "total": 16500
     },
     "k2_components": {
       "qty": 1,
       "unit": "soubor",
-      "total": 92136
+      "total": 84400
     },
     "k2_mount": {
       "qty": 217,
       "unit": "ks",
-      "total": 73000
+      "total": 86800
+    },
+    "invrdc1": {
+      "qty": 1,
+      "unit": "ks",
+      "total": 15000
+    },
+    "invrdc2": {
+      "qty": 1,
+      "unit": "ks",
+      "total": 9000
+    },
+    "rdc": {
+      "qty": 0,
+      "unit": "ks",
+      "total": 0
+    },
+    "rfve1": {
+      "qty": 1,
+      "unit": "ks",
+      "total": 77000
+    },
+    "rfve2": {
+      "qty": 1,
+      "unit": "ks",
+      "total": 49000
+    },
+    "ris1_r12": {
+      "qty": 1,
+      "unit": "soubor",
+      "total": 15000
+    },
+    "ris1_r112": {
+      "qty": 1,
+      "unit": "soubor",
+      "total": 12000
+    },
+    "panels_mount": {
+      "qty": 1,
+      "unit": "soubor",
+      "total": 67500
+    },
+    "dc_cable6": {
+      "qty": 152,
+      "unit": "m",
+      "total": 4545
+    },
+    "dc_cable10": {
+      "qty": 187,
+      "unit": "m",
+      "total": 8752
+    },
+    "ac_cables_rfve1": {
+      "qty": 65,
+      "unit": "m",
+      "total": 63180
+    },
+    "ac_cables_rfve2": {
+      "qty": 18,
+      "unit": "m",
+      "total": 9720
+    },
+    "electrical_work": {
+      "qty": 1,
+      "unit": "soubor",
+      "total": 42000
+    },
+    "transport": {
+      "qty": 2352,
+      "unit": "km",
+      "total": 29635
+    },
+    "config": {
+      "qty": 1,
+      "unit": "soubor",
+      "total": 7500
+    },
+    "documentation": {
+      "qty": 1,
+      "unit": "soubor",
+      "total": 9000
     }
   },
   "totals": {
-    "withoutVat": 964177,
-    "vat": 202477,
+    "withoutVat": 965177,
+    "vat": 202687,
     "withVat": 1167865
   }
 }
