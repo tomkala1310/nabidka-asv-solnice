@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "version": "1.0",
+    "lastUpdated": "2025-06-04T00:00:00.000Z",
+    "description": "Centrální databáze komponentů a služeb pro FVE nabídky"
+  },
+  "categories": {
+    "solaredge": {
+      "name": "SolarEdge komponenty",
+      "icon": "🔌",
+      "description": "Střídače, optimizéry a monitoring"
+    },
+    "mounting": {
+      "name": "Montážní práce", 
+      "icon": "🔧",
+      "description": "Montáž panelů, střídačů a příslušenství"
+    },
+    "structure": {
+      "name": "Nosná konstrukce",
+      "icon": "🏗️", 
+      "description": "K2 Systems a jiné montážní systémy"
+    },
+    "electrical": {
+      "name": "Rozvaděče a elektro",
+      "icon": "📦",
+      "description": "Rozvaděče, combiner boxy a výzbroj"
+    },
+    "cables": {
+      "name": "Kabeláž",
+      "icon": "⚡",
+      "description": "DC/AC kabely a elektroinstalace"
+    },
+    "transport": {
+      "name": "Doprava",
+      "icon": "🚚",
+      "description": "Přeprava materiálu a techniky"
+    },
+    "service": {
+      "name": "Servis a uvedení",
+      "icon": "🔧",
+      "description": "Konfigurace, dokumentace a školení"
+    }
+  },
+  "components": {
+    "se50k": {
+      "name": "SE50K MC4 střídač",
+      "category": "solaredge",
+      "basePrice": 60934,
+      "unit": "ks",
+      "description": "SolarEdge SE50K trojfázový střídač s MC4 konektory",
+      "specifications": {
+        "power": "50kW",
+        "phases": 3,
+        "efficiency": "98.8%"
+      },
+      "defaultMargin": 10
+    },
+    "se25k": {
+      "name": "SE25K-M4 střídač", 
+      "category": "solaredge",
+      "basePrice": 31838,
+      "unit": "ks",
+      "description": "SolarEdge SE25K trojfázový střídač",
+      "specifications": {
+        "power": "25kW", 
+        "phases": 3,
+        "efficiency": "98.6%"
+      },
+      "defaultMargin": 10
+    },
+    "optimizers": {
+      "name": "S1000 optimizéry",
+      "category": "solaredge", 
+      "basePrice": 1107,
+      "unit": "ks",
+      "description": "SolarEdge S1000 výkonové optimizéry",
+      "specifications": {
+        "power": "1000W",
+        "efficiency": "99.5%"
+      },
+      "defaultMargin": 10
+    },
+    "panel_mount": {
+      "name": "Montáž FV panelů",
+      "category": "mounting",
+      "basePrice": 276,
+      "unit": "ks", 
+      "description": "Montáž fotovoltaických panelů včetně připojení optimizérů",
+      "defaultMargin": 50
+    },
+    "inverter_mount": {
+      "name": "Montáž střídačů",
+      "category": "mounting",
+      "basePrice": 4000,
+      "unit": "ks",
+      "description": "Montáž a propojení střídačů",
+      "defaultMargin": 25
+    },
+    "optimizer_mount": {
+      "name": "Montáž optimizérů", 
+      "category": "mounting",
+      "basePrice": 73,
+      "unit": "ks",
+      "description": "Montáž a zapojení optimizérů k panelům",
+      "defaultMargin": 67
+    },
+    "k2_components": {
+      "name": "K2 MultiRail komponenty",
+      "category": "structure",
+      "basePrice": 70333,
+      "unit": "soubor",
+      "description": "Kompletní sada K2 MultiRail pro nosnou konstrukci",
+      "defaultMargin": 31
+    },
+    "k2_mount": {
+      "name": "Montáž K2 konstrukce",
+      "category": "structure", 
+      "basePrice": 230,
+      "unit": "ks",
+      "description": "Montáž nosné konstrukce K2 Systems",
+      "defaultMargin": 46
+    },
+    "invrdc1": {
+      "name": "DC rozvaděč INVRDC1",
+      "category": "electrical",
+      "basePrice": 8000,
+      "unit": "ks",
+      "description": "DC rozvaděč pro střídač SE50K",
+      "defaultMargin": 50
+    },
+    "invrdc2": {
+      "name": "DC rozvaděč INVRDC2", 
+      "category": "electrical",
+      "basePrice": 6000,
+      "unit": "ks",
+      "description": "DC rozvaděč pro střídač SE25K",
+      "defaultMargin": 50
+    },
+    "rdc": {
+      "name": "DC rozvaděče RDC",
+      "category": "electrical",
+      "basePrice": 3500,
+      "unit": "ks", 
+      "description": "DC rozvaděče u řetězců",
+      "defaultMargin": 50
+    },
+    "rfve1": {
+      "name": "AC rozvaděč RFVE1",
+      "category": "electrical",
+      "basePrice": 15000,
+      "unit": "ks",
+      "description": "AC rozvaděč pro SE50K",
+      "defaultMargin": 40
+    },
+    "rfve2": {
+      "name": "AC rozvaděč RFVE2",
+      "category": "electrical", 
+      "basePrice": 10000,
+      "unit": "ks",
+      "description": "AC rozvaděč pro SE25K",
+      "defaultMargin": 40
+    },
+    "ris1_r12": {
+      "name": "Výzbroj RIS1.R1.2",
+      "category": "electrical",
+      "basePrice": 12000,
+      "unit": "soubor",
+      "description": "Výzbroj pro napojení RFVE1",
+      "defaultMargin": 50
+    },
+    "ris1_r112": {
+      "name": "Výzbroj RIS1.R1.1.2",
+      "category": "electrical",
+      "basePrice": 8000, 
+      "unit": "soubor",
+      "description": "Výzbroj pro napojení RFVE2",
+      "defaultMargin": 50
+    },
+    "panels_mount": {
+      "name": "Montáž rozvaděčů",
+      "category": "electrical",
+      "basePrice": 1000,
+      "unit": "ks",
+      "description": "Montáž rozvaděčů a výzbroje",
+      "defaultMargin": 50
+    },
+    "dc_cable6": {
+      "name": "DC kabel 6mm²",
+      "category": "cables",
+      "basePrice": 85,
+      "unit": "m",
+      "description": "DC kabel 6mm² pro fotovoltaiku",
+      "defaultMargin": 50
+    },
+    "dc_cable10": {
+      "name": "DC kabel 10mm²",
+      "category": "cables", 
+      "basePrice": 120,
+      "unit": "m",
+      "description": "DC kabel 10mm² pro fotovoltaiku",
+      "defaultMargin": 50
+    },
+    "ac_cables_rfve1": {
+      "name": "AC kabelová trasa RFVE1",
+      "category": "cables",
+      "basePrice": 15000,
+      "unit": "m",
+      "description": "AC kabelová trasa pro RFVE1",
+      "defaultMargin": 40
+    },
+    "ac_cables_rfve2": {
+      "name": "AC kabelová trasa RFVE2", 
+      "category": "cables",
+      "basePrice": 10000,
+      "unit": "m",
+      "description": "AC kabelová trasa pro RFVE2",
+      "defaultMargin": 40
+    },
+    "electrical_work": {
+      "name": "Montáž kabelových tras",
+      "category": "cables",
+      "basePrice": 375,
+      "unit": "hod",
+      "description": "Montáž kabelových tras a elektroinstalace",
+      "defaultMargin": 67
+    },
+    "transport": {
+      "name": "Doprava",
+      "category": "transport",
+      "basePrice": 12,
+      "unit": "km", 
+      "description": "Doprava na místo realizace",
+      "defaultMargin": 0
+    },
+    "config": {
+      "name": "Konfigurace a zkouška",
+      "category": "service",
+      "basePrice": 20000,
+      "unit": "soubor",
+      "description": "Konfigurace systému a funkční zkouška",
+      "defaultMargin": 75
+    },
+    "documentation": {
+      "name": "Dokumentace a školení",
+      "category": "service",
+      "basePrice": 6000,
+      "unit": "soubor", 
+      "description": "Dokumentace a školení obsluhy",
+      "defaultMargin": 67
+    }
+  }
+}

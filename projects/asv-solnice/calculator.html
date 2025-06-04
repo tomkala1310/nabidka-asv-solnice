@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozpočtová kalkulace - ASV Solnice</title>
+    <link rel="stylesheet" href="../../styles/calculator.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rozpočtová kalkulace FVE</h1>
+            <p>Instalace FVE "ASV Solnice" - Profesionální rozpočtování s množstvími a jednotkami</p>
+        </div>
+
+        <div class="content">
+            <!-- ROZPOČET -->
+            <div class="budget-section">
+                <h2 class="section-title">📋 Rozpočtová kalkulace</h2>
+                
+                <!-- Dynamicky generované skupiny položek -->
+                <div id="budget-groups">
+                    <!-- Zde se vygenerují skupiny z konfigurace -->
+                </div>
+
+                <div class="controls">
+                    <button class="btn" onclick="calculateBudget()">🔄 Přepočítat rozpočet</button>
+                    <button class="btn btn-secondary" onclick="resetBudget()">↩️ Výchozí hodnoty</button>
+                    <button class="btn" onclick="exportBudget()">📝 Export do nabídky</button>
+                    <button class="btn btn-success" onclick="saveProject()">💾 Uložit projekt</button>
+                </div>
+            </div>
+
+            <!-- NÁHLED -->
+            <div class="preview-section">
+                <h2 class="section-title">📊 Shrnutí rozpočtu</h2>
+                
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total_items">0</div>
+                        <div class="stat-label">Rozpočtových položek</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="total_cost">0</div>
+                        <div class="stat-label">Náklady celkem</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="total_margin">0</div>
+                        <div class="stat-label">Marže celkem</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="avg_margin">0%</div>
+                        <div class="stat-label">Průměrná marže</div>
+                    </div>
+                </div>
+
+                <table class="preview-table">
+                    <thead>
+                        <tr>
+                            <th>Skupina</th>
+                            <th>Náklad</th>
+                            <th>Marže</th>
+                            <th>Celkem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="preview_tbody">
+                        <!-- Dynamicky generováno -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td><strong>CELKEM bez DPH</strong></td>
+                            <td class="price-cell" id="preview_total_cost"><strong>0</strong></td>
+                            <td class="price-cell" id="preview_total_margin"><strong>0</strong></td>
+                            <td class="price-cell" id="preview_total_final"><strong>0</strong></td>
+                        </tr>
+                        <tr>
+                            <td>DPH 21%</td>
+                            <td></td>
+                            <td></td>
+                            <td class="price-cell" id="preview_vat">0</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td><strong>CELKEM s DPH</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td class="price-cell" id="preview_total_with_vat"><strong>0</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Template pro skupinu položek -->
+    <template id="group-template">
+        <div class="item-group">
+            <h3></h3>
+            
+            <div class="budget-header">
+                <div>Položka</div>
+                <div>Množství</div>
+                <div>Jednotka</div>
+                <div>Jedn. cena</div>
+                <div>Marže %</div>
+                <div>Celkem</div>
+            </div>
+            
+            <div class="group-items">
+                <!-- Zde se vygenerují položky -->
+            </div>
+        </div>
+    </template>
+
+    <!-- Template pro položku -->
+    <template id="item-template">
+        <div class="budget-item">
+            <div class="item-label"></div>
+            <input type="number" class="input-field qty-input" min="0" autocomplete="off">
+            <select class="input-field unit-select" autocomplete="off"></select>
+            <input type="number" class="input-field price-input" min="0" autocomplete="off">
+            <input type="number" class="input-field margin-input" min="0" autocomplete="off">
+            <div class="final-price">0</div>
+        </div>
+    </template>
+
+    <script src="../../js/calculator-engine.js"></script>
+    <script>
+        // Inicializace kalkulátoru
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                await calculator.loadProjectConfiguration();
+                await calculator.loadComponentsDatabase();
+                calculator.generateCalculatorInterface();
+                calculator.setupEventListeners();
+                calculator.calculateBudget();
+                calculator.showNotification('✅ Univerzální kalkulator byl úspěšně načten');
+            } catch (error) {
+                console.error('Chyba při inicializaci kalkulátoru:', error);
+                calculator.showNotification('❌ Chyba při načítání konfigurace: ' + error.message, 'error');
+            }
+        });
+    </script>
+</body>
+</html>

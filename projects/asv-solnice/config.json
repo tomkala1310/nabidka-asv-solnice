@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "projectId": "asv-solnice",
+    "name": "ASV Solnice",
+    "description": "Fotovoltaická elektrárna ASV Solnice",
+    "created": "2025-06-04T00:00:00.000Z",
+    "version": "1.0"
+  },
+  "client": {
+    "name": "Green Technology s.r.o.",
+    "address": "kpt. Bartoše 409, Pardubice",
+    "ico": "29182824",
+    "contact": {
+      "person": "Zástupce objednatele",
+      "email": "",
+      "phone": ""
+    }
+  },
+  "project": {
+    "title": "Instalace FVE \"ASV Solnice\"",
+    "location": "Školní 71, 517 01 Solnice",
+    "cadastre": "Solnice [665126]",
+    "quoteDate": "3. 6. 2025",
+    "validityDays": 30,
+    "deliveryDate": "do konce července 2025"
+  },
+  "technical": {
+    "installedPower": "99,82 kWp",
+    "acPower": "75,0 kW", 
+    "panelCount": 217,
+    "optimizerCount": 110,
+    "fieldCount": 5,
+    "yearlyProduction": "99,8 MWh/rok"
+  },
+  "budget": {
+    "items": [
+      {
+        "componentId": "se50k",
+        "quantity": 1,
+        "customName": null,
+        "customPrice": null,
+        "customMargin": null
+      },
+      {
+        "componentId": "se25k", 
+        "quantity": 1
+      },
+      {
+        "componentId": "optimizers",
+        "quantity": 110
+      },
+      {
+        "componentId": "panel_mount",
+        "quantity": 217
+      },
+      {
+        "componentId": "inverter_mount",
+        "quantity": 2
+      },
+      {
+        "componentId": "optimizer_mount", 
+        "quantity": 110
+      },
+      {
+        "componentId": "k2_components",
+        "quantity": 1
+      },
+      {
+        "componentId": "k2_mount",
+        "quantity": 217
+      },
+      {
+        "componentId": "invrdc1",
+        "quantity": 1
+      },
+      {
+        "componentId": "invrdc2",
+        "quantity": 1
+      },
+      {
+        "componentId": "rdc",
+        "quantity": 0,
+        "note": "Položka zrušena dle požadavku zákazníka"
+      },
+      {
+        "componentId": "rfve1",
+        "quantity": 1
+      },
+      {
+        "componentId": "rfve2", 
+        "quantity": 1
+      },
+      {
+        "componentId": "ris1_r12",
+        "quantity": 1
+      },
+      {
+        "componentId": "ris1_r112",
+        "quantity": 1
+      },
+      {
+        "componentId": "panels_mount",
+        "quantity": 9,
+        "customName": "Montáž rozvaděčů a výzbroje"
+      },
+      {
+        "componentId": "dc_cable6",
+        "quantity": 152
+      },
+      {
+        "componentId": "dc_cable10",
+        "quantity": 133
+      },
+      {
+        "componentId": "ac_cables_rfve1",
+        "quantity": 1
+      },
+      {
+        "componentId": "ac_cables_rfve2",
+        "quantity": 1
+      },
+      {
+        "componentId": "electrical_work",
+        "quantity": 40
+      },
+      {
+        "componentId": "transport",
+        "quantity": 1400
+      },
+      {
+        "componentId": "config",
+        "quantity": 1
+      },
+      {
+        "componentId": "documentation",
+        "quantity": 1
+      }
+    ],
+    "vat": 0.21,
+    "currency": "Kč"
+  },
+  "terms": {
+    "payment": "30% záloha, 70% při předání",
+    "warranty": {
+      "mounting": "5 let na montáž",
+      "components": "12 let na komponenty SolarEdge"
+    },
+    "included": [
+      "Kompletní dodávka komponentů (mimo FV panely)",
+      "Montáž na 5 střešních polích", 
+      "Nosná konstrukce K2 Systems",
+      "Elektroinstalace a rozvaděče",
+      "Uvedení do provozu a zaškolení",
+      "Dokumentace rozvaděčů"
+    ],
+    "excluded": [
+      "FV moduly JinkoSolar JKM-460M-60HL4 (217 ks) si zajišťuje objednatel vlastními kanály"
+    ]
+  },
+  "contractor": {
+    "name": "iSolar PV s.r.o.",
+    "ico": "14281597",
+    "address": "Hronovická 663, Pardubice 53002",
+    "contact": {
+      "person": "Kalabis Tomáš",
+      "position": "Jednatel společnosti",
+      "phone": "+420 602 837 611",
+      "email": "tomas.kalabis@isolarpv.cz"
+    }
+  }
+}
