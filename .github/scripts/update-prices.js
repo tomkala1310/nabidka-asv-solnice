@@ -134,7 +134,7 @@ function updateHtmlFile(pricesData) {
         
         // Aktualizace cen
         for (const [elementId, newPrice] of Object.entries(priceMapping)) {
-            if (newPrice !== null) {
+            if (newPrice !== null && newPrice !== undefined) {
                 const formattedPrice = formatPrice(newPrice) + ' Kč';
                 const regex = new RegExp(`(<td[^>]*id="${elementId}"[^>]*>)[^<]*(</td>)`, 'g');
                 const oldContent = htmlContent;
