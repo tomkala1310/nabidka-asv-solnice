@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cenová nabídka - ASV Solnice</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <style>
         * {
             margin: 0;
@@ -386,15 +389,73 @@
         
         @media print {
             body {
-                background: white;
+                background: white !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
             }
             
             .container {
-                box-shadow: none;
+                box-shadow: none !important;
+                max-width: none !important;
+                margin: 0 !important;
+                background: white !important;
+            }
+            
+            .header {
+                background: linear-gradient(135deg, #1e3a72 0%, #2c5aa0 100%) !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+                page-break-inside: avoid;
+            }
+            
+            .header::before {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
             }
             
             .param-card:hover {
-                transform: none;
+                transform: none !important;
+            }
+            
+            .param-card {
+                page-break-inside: avoid;
+            }
+            
+            .info-section {
+                page-break-inside: avoid;
+            }
+            
+            .price-table {
+                page-break-inside: avoid;
+            }
+            
+            .conditions {
+                page-break-inside: avoid;
+            }
+            
+            .footer {
+                page-break-inside: avoid;
+            }
+            
+            /* Zajistí správné zlomy stránek */
+            h2 {
+                page-break-after: avoid;
+            }
+            
+            /* Zachová barvy gradientů */
+            .header, .param-card {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            /* Optimalizace pro A4 */
+            @page {
+                size: A4;
+                margin: 1.5cm;
             }
         }
     </style>
