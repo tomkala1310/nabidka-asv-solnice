@@ -38,7 +38,7 @@ The system uses localStorage to pass calculated data between pages:
 - SolarEdge inverters (SE50K, SE25K)
 - Power optimizers (S1000 series)
 - K2 Systems mounting structure
-- JinkoSolar panels (supplied by customer)
+- **Leapton Energy LP182x182-M-60-MH-460 panels** (supplied by customer)
 - Electrical components and cabling
 
 ### Pricing Categories
@@ -79,3 +79,42 @@ Since this is a static HTML project:
 - Currency displayed in Czech Koruna (Kč)
 - Date format: DD. M. YYYY
 - Czech number formatting (space as thousands separator)
+
+# important-instruction-reminders
+Do what has been asked; nothing more, nothing less.
+NEVER create files unless they're absolutely necessary for achieving your goal.
+ALWAYS prefer editing an existing file to creating a new one.
+NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
+
+## Recent Work Completed (2025-06-20)
+
+### Panel Type Update
+- Changed FV panel type from JinkoSolar JKM-460M-60HL4 to **Leapton Energy LP182x182-M-60-MH-460**
+- Updated in both `index.html` (root) and `projects/asv-solnice/index.html`
+- Issue was that GitHub Pages uses root index.html, not the project subfolder
+
+### PDF Print Optimization
+- Added comprehensive CSS print styles for A4 format
+- Included cache busting meta tags to force browser refresh
+- Print styles include:
+  - Color preservation for gradients
+  - Proper page breaks
+  - A4 margins (1.5cm)
+  - Prevention of element deformation
+
+### Files Modified
+1. `index.html` - Root file used by GitHub Pages
+2. `projects/asv-solnice/index.html` - Project-specific file
+
+### Git Status
+- All changes committed and pushed to GitHub
+- Latest commits:
+  - acc148d - Root nabídky oprava s panely a PDF
+  - 25862e7 - PDF optimalizace pro projects/asv-solnice/
+  - b1483db - Původní změna panelů
+
+### System Architecture
+- Universal system v2.0 implemented
+- Database-driven component management
+- GitHub Actions automation
+- Scalable for multiple projects
